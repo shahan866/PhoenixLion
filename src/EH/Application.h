@@ -1,23 +1,24 @@
 #include <memory>
-#include <lists>
+#include <vector>
 
-class Entity;
+namespace EH
+{
 
-class Application {
+	class Entity;
 
-public:
-	Application();
-	~Application();
+	class Application
+	{
+	public: 
+		static std::shared_ptr<Application> initialize();
 
-	static std::shared_ptr <Application> initialize();
-	void start();
-	void stop();
-	std::shared_ptr <Entity> addEntity();
+		void start();
+		void stop();
+		std::shared_ptr<Entity> addEntity();
 
-private: 
-	std::list <std::shared_ptr <Entity>> entities;
-	std::shared_ptr <Environment> environment;
-	std::shared_ptr <Keyboard> keyboard;
-	bool running;
+	private:
+		bool running;
+		std::vector<std::shared_ptr<Entity> > entities;
+		std::weak_ptr<Application> self;
+	};
 
-};
+}

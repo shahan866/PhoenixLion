@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 2.6)
 project (EH)
 
+include_directories(
+  src
+)
+
 add_library (EH 
 src/EH/dummy.cpp
 src/EH/Application.cpp
@@ -15,7 +19,7 @@ src/EH/Keyboard.cpp
 src/EH/Keyboard.h
 )
 
-target_link_libraries(EH SDL2 opengl32 glew32)
+target_link_libraries(EH SDL2)
 
 add_executable(sandbox
  src/sandbox/main.cpp
