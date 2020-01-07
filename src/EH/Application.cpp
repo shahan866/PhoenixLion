@@ -9,6 +9,7 @@ namespace EH
 
 	void Application::start()
 	{
+
 	}
 
 	void Application::stop()
