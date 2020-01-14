@@ -67,7 +67,7 @@ namespace EH
 
 	private:
 		std::weak_ptr<Entity> self;
-		std::weak_ptr<Application> Application;
+		std::weak_ptr<Application> application;
 		std::vector<std::shared_ptr<Component> > components;
 
 		void tick();

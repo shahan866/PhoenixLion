@@ -18,14 +18,16 @@ src/EH/Environment.cpp
 src/EH/Environment.h
 src/EH/Keyboard.cpp
 src/EH/Keyboard.h
-src/Eng/Exception.h
-src/Eng/Exception.cpp  
-src/Eng/Renderer.h
-src/Eng/Renderer.cpp
-src/Eng/Shader.h
-src/Eng/Shader.cpp
-src/Eng/stb_image.h
-src/Eng/stb_image.cpp
+src/EH/Exception.h
+src/EH/Exception.cpp  
+src/EH/Renderer.h
+src/EH/Renderer.cpp
+src/EH/Shader.h
+src/EH/Shader.cpp
+src/EH/stb_image.h
+src/EH/stb_image.cpp
+src/EH/Camera.h
+src/EH/Camera.cpp
 )
 
 target_link_libraries(EH SDL2)

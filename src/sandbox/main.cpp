@@ -2,6 +2,7 @@
 #include <memory>
 #include <string>
 #include <EH/eh.h>
+
 class TestScreen : public EH::Component
 {
 public:
@@ -31,11 +32,15 @@ public:
 
 int main()
 {
+
+
 	//Initialize application, create window, add glew, and other functionality eg. sound
 	std::shared_ptr<EH::Application> Engine = EH::Application::initialize();
+
 	//add entity
 	std::shared_ptr<EH::Entity> Entity = Engine->addEntity();
-	//add component to entity
+	
+  //add component to entity
 	std::shared_ptr<TestScreen> Test = Entity->addComponent<TestScreen>("Blue", 5);
 
 	//start function loops through each entity, first through tick funtions of the entity's components

@@ -5,7 +5,7 @@ namespace EH
 
 	std::shared_ptr<Application> Entity::getApplication()
 	{
-		return Application.lock();
+		return application.lock();
 	}
 
 	void Entity::tick()

@@ -4,6 +4,10 @@
 #include "Application.h"
 #include "Entity.h"
 #include "Component.h"
+#include "Camera.h"
+#include "Transform.h"
+#include "Renderer.h"
+#include "Shader.h"
 
 
 #endif
