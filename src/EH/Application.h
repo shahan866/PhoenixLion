@@ -1,7 +1,14 @@
 #include <memory>
 #include <vector>
 
+#include <GL/glew.h>
+
+
+
 #include <SDL2\SDL.h>
+
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT 600
 
 namespace EH
 {

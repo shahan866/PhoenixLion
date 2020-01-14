@@ -67,9 +67,9 @@ namespace EH
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
-    std::cout << "********************************"
+    std::cout << "-----"
       << "Renderer Initialised"
-      << "********************************" << std::endl;
+      << "-----" << std::endl;
   };
 }
 namespace EH
@@ -77,16 +77,16 @@ namespace EH
   void Renderer::onDisplay()
   {
 
-    //model matrices
+    //Model Matrices
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texture);
 
-    // render cube
+    //Render Cube
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
 
-    //unbind
+    //Unbind VAO & VBO
     glBindVertexArray(0);
     glActiveTexture(GL_TEXTURE0);
 

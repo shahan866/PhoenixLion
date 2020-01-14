@@ -28,9 +28,12 @@ src/EH/stb_image.h
 src/EH/stb_image.cpp
 src/EH/Camera.h
 src/EH/Camera.cpp
+src/EH/Transfrom.h
+src/EH/Transfrom.cpp
+
 )
 
-target_link_libraries(EH SDL2)
+target_link_libraries(EH SDL2 opengl32 glew32)
 
 add_executable(sandbox
  src/sandbox/main.cpp
