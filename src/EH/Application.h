@@ -2,13 +2,7 @@
 #include <vector>
 
 #include <GL/glew.h>
-
-
-
 #include <SDL2\SDL.h>
-
-#define WINDOW_WIDTH 800
-#define WINDOW_HEIGHT 600
 
 namespace EH
 {
@@ -23,6 +17,9 @@ namespace EH
 		void start();
 		void stop();
 		std::shared_ptr<Entity> addEntity();
+
+		const float m_WindowWidth = 800;
+		const float m_WindowHeight = 600;
 
 	private:
 		bool running;

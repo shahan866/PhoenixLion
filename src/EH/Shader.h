@@ -1,16 +1,13 @@
 #pragma once
 
 #include <GL/glew.h>
-
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
-
 #include <string>
 #include <fstream>
 #include <sstream>
 #include <iostream>
-
 #include "Component.h"
 
 namespace EH
@@ -51,6 +48,6 @@ REFRRENCE
 
 LearnOpenGL, 2016. CoordinateSystems [online]. Available from:
 https://learnopengl.com/Getting-started/Coordinate-Systems [Accessed on:
-13th January 2020].
+14th January 2020].
 
 */

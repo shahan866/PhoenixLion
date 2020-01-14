@@ -28,8 +28,8 @@ src/EH/stb_image.h
 src/EH/stb_image.cpp
 src/EH/Camera.h
 src/EH/Camera.cpp
-src/EH/Transfrom.h
-src/EH/Transfrom.cpp
+src/EH/Transform.h
+src/EH/Transform.cpp
 
 )
 

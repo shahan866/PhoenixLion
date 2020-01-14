@@ -90,7 +90,7 @@ namespace EH
     glBindVertexArray(0);
     glActiveTexture(GL_TEXTURE0);
 
-    std::cout << "Renderer display Called" << std::endl;
+    std::cout << "Renderer display called" << std::endl;
   }
 }
 namespace EH

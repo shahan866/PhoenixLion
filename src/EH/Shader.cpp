@@ -1,4 +1,7 @@
 #include "Shader.h"
+#include "Camera.h"
+#include "Entity.h"
+#include "Transform.h"
 
 namespace EH
 {
@@ -90,55 +93,80 @@ namespace EH
       std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
     }
 
-    // delete the shaders as they're linked into our program now and no longer necessery
+    // delete the shaders as they're linked into program now and no longer necessery
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
   }
 
   void Shader::onDisplay() {
     glUseProgram(ID);
+
+	//View Matrix
+	glm::vec3 _pos = getEntity()->getComponent<Transform>()->getPosition();
+	glm::vec3 _front = getEntity()->getComponent<Transform>()->getFront();
+	glm::vec3 _up = getEntity()->addComponent<Transform>()->getUp();
+	glm::mat4 _view = glm::lookAt(_pos, _pos + _front, _up);
+
+	//Projection Matrix
+	glm::mat4 _projection = glm::perspective(glm::radians(45.0f), (float)800.f / (float)600.f, 0.1f, 100.0f);
+
+	//Pass Variables into the Shader
+	setMat4("view", _view);
+	setMat4("projection", _projection);
   }
+
   void Shader::setBool(const std::string &name, bool value) const {
     glUniform1i(glGetUniformLocation(ID, name.c_str()), (int)value);
   }
+
   void Shader::setInt(const std::string &name, int value) const {
     glUniform1i(glGetUniformLocation(ID, name.c_str()), value);
   }
+
   void Shader::setFloat(const std::string &name, float value) const {
     glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
   }
+
   void Shader::setVec2(const std::string &name, const glm::vec2 &value) const
   {
     glUniform2fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
   }
+
   void Shader::setVec2(const std::string &name, float x, float y) const
   {
     glUniform2f(glGetUniformLocation(ID, name.c_str()), x, y);
   }
+
   void Shader::setVec3(const std::string &name, const glm::vec3 &value) const
   {
     glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
   }
+
   void Shader::setVec3(const std::string &name, float x, float y, float z) const
   {
     glUniform3f(glGetUniformLocation(ID, name.c_str()), x, y, z);
   }
+
   void Shader::setVec4(const std::string &name, const glm::vec4 &value) const
   {
     glUniform4fv(glGetUniformLocation(ID, name.c_str()), 1, &value[0]);
   }
+
   void Shader::setVec4(const std::string &name, float x, float y, float z, float w)
   {
     glUniform4f(glGetUniformLocation(ID, name.c_str()), x, y, z, w);
   }
+
   void Shader::setMat2(const std::string &name, const glm::mat2 &mat) const
   {
     glUniformMatrix2fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
   }
+
   void Shader::setMat3(const std::string &name, const glm::mat3 &mat) const
   {
     glUniformMatrix3fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
   }
+
   void Shader::setMat4(const std::string &name, const glm::mat4 &mat) const
   {
     glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &mat[0][0]);
@@ -146,10 +174,10 @@ namespace EH
 }
 /*
 
-REFRRENCE
+REFERENCE:
 
 LearnOpenGL, 2016. CoordinateSystems [online]. Available from:
 https://learnopengl.com/Getting-started/Coordinate-Systems [Accessed on:
-13th January 2020].
+14th January 2020].
 
 */
