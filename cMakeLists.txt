@@ -6,6 +6,7 @@ include_directories(
 )
 
 add_library (EH 
+src/EH/eh.h
 src/EH/dummy.cpp
 src/EH/Application.cpp
 src/EH/Application.h
@@ -17,6 +18,14 @@ src/EH/Environment.cpp
 src/EH/Environment.h
 src/EH/Keyboard.cpp
 src/EH/Keyboard.h
+src/Eng/Exception.h
+src/Eng/Exception.cpp  
+src/Eng/Renderer.h
+src/Eng/Renderer.cpp
+src/Eng/Shader.h
+src/Eng/Shader.cpp
+src/Eng/stb_image.h
+src/Eng/stb_image.cpp
 )
 
 target_link_libraries(EH SDL2)

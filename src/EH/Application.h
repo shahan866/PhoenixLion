@@ -1,6 +1,8 @@
 #include <memory>
 #include <vector>
 
+#include <SDL2\SDL.h>
+
 namespace EH
 {
 
@@ -19,6 +21,9 @@ namespace EH
 		bool running;
 		std::vector<std::shared_ptr<Entity> > entities;
 		std::weak_ptr<Application> self;
+
+		SDL_Window *window;
+
 	};
 
 }
