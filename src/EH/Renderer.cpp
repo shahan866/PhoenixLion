@@ -67,9 +67,7 @@ namespace EH
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
 
-    std::cout << "-----"
-      << "Renderer Initialised"
-      << "-----" << std::endl;
+    std::cout << "Renderer Initialised" << std::endl;
   };
 }
 namespace EH
@@ -90,7 +88,7 @@ namespace EH
     glBindVertexArray(0);
     glActiveTexture(GL_TEXTURE0);
 
-    std::cout << "Renderer display called" << std::endl;
+    std::cout << "Renderer Display Called" << std::endl;
   }
 }
 namespace EH

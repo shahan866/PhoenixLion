@@ -11,10 +11,10 @@ namespace EH
 	//Initialize to identity matrix
     glm::mat4 m_Transform = glm::mat4(1.0f); 
     glm::vec3 m_Position;
-    glm::vec3 m_Rotation;
-    glm::vec3 m_Scale;
-	glm::vec3 m_Front;
-	glm::vec3 m_Up;
+	glm::vec3 m_Rotation = glm::vec3(0.0f, 0.0f, 0.0f);
+	glm::vec3 m_Scale = glm::vec3(1.0f);
+	//glm::vec3 m_Front;
+	//glm::vec3 m_Up;
 
   public:
 
@@ -24,15 +24,15 @@ namespace EH
     glm::vec3 getPosition() { return m_Position; }
     glm::vec3 getRotation() { return m_Rotation; }
     glm::vec3 getScale() { return m_Scale; }
-	glm::vec3 getFront() { return m_Front; }
-	glm::vec3 getUp() { return m_Up; }
+	//glm::vec3 getFront() { return m_Front; }
+	//glm::vec3 getUp() { return m_Up; }
 
     //Setters
     void setTransform(glm::mat4 _transform) { m_Transform = _transform; }
     void setPosition(glm::vec3 _position) { m_Position = _position; }
     void setRotation(glm::vec3 _rotation) { m_Rotation = _rotation; }
     void setScale(glm::vec3 _scale) { m_Scale = _scale; }
-	void setFront(glm::vec3 _front) { m_Front = _front; }
-	void setUp(glm::vec3 _up) { m_Up = _up; }
+	//void setFront(glm::vec3 _front) { m_Front = _front; }
+	//void setUp(glm::vec3 _up) { m_Up = _up; }
   };
 }

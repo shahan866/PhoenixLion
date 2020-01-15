@@ -3,7 +3,7 @@
 #include <string>
 #include <EH/eh.h>
 
-class TestScreen : public EH::Component
+/*class TestScreen : public EH::Component
 {
 public:
 	void onInit(std::string color,int n)
@@ -26,26 +26,37 @@ public:
 	{
 		std::cout << "onDisplay" << std::endl;
 	}
-};
+};*/
 
 
 
 int main()
 {
-
+	std::cout << "EH Engine Demo" << std::endl;
 
 	//Initialize application, create window, add glew, and other functionality eg. sound
 	std::shared_ptr<EH::Application> Engine = EH::Application::initialize();
-	//add entity
-	std::shared_ptr<EH::Entity> Entity = Engine->addEntity();
 	
-  //add component to entity
-	//std::shared_ptr<TestScreen> Test = Entity->addComponent<TestScreen>("Blue", 5);
+	std::cout << "Application Initialised" << std::endl;
 
-	// Add a very simple component to it
-	std::shared_ptr<EH::Shader> shader = Entity->addComponent<EH::Shader>("../resources/simple.vert", "../resources/simple.frag");
-	std::shared_ptr<EH::Renderer> renderer = Entity->addComponent<EH::Renderer>();
-	renderer->loadTexture("../resources/WoodCrateTexture.jpg");
+	//Add Entity (Cube 1, Crate)
+	std::shared_ptr<EH::Entity> entityCube = Engine->addEntity();
+	//Add Components to Cube 1
+	std::shared_ptr<EH::Transform> transformCube = entityCube->addComponent<EH::Transform>();
+	//Transformations
+	entityCube->getComponent<EH::Transform>()-> setPosition(glm::vec3(1.0f, 1.0f, -10.0f));
+	entityCube->getComponent<EH::Transform>()->setRotation(glm::vec3(2.0f, 0.0f, 0.0f));
+	entityCube->getComponent<EH::Transform>()->setScale(glm::vec3(1.0f, 1.0f, -1.0f));
+	//Shaders/Render/Load Textures
+	std::shared_ptr<EH::Shader> shaderCube = entityCube->addComponent<EH::Shader>("../resources/simple.vert", "../resources/simple.frag");
+	std::shared_ptr<EH::Renderer> renderCube = entityCube->addComponent<EH::Renderer>();
+	renderCube->loadTexture("../resources/WoodCrateTexture.jpg");
+
+	//Add Entity (Camera)
+	std::shared_ptr<EH::Entity> entityCamera = Engine->addEntity();
+	//Add Componenets to Camera
+	std::shared_ptr<EH::Transform> transformCamera = entityCamera->addComponent<EH::Transform>();
+	std::shared_ptr<EH::Camera> cameraCamera = entityCamera->addComponent<EH::Camera>();
 
 	//start function loops through each entity, first through tick funtions of the entity's components
 	//then display functions of the entity's components
