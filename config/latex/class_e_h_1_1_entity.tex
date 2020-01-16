@@ -1,0 +1,60 @@
+\hypertarget{class_e_h_1_1_entity}{}\doxysection{EH\+::Entity Class Reference}
+\label{class_e_h_1_1_entity}\index{EH::Entity@{EH::Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_aa097ef59d5d1303eb3028440dc15e341}\label{class_e_h_1_1_entity_aa097ef59d5d1303eb3028440dc15e341}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_e_h_1_1_entity_aa097ef59d5d1303eb3028440dc15e341}{get\+Component}} ()
+\begin{DoxyCompactList}\small\item\em gets Components from vector list \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_a7d2aee0830aea5b913243ae7d013e224}\label{class_e_h_1_1_entity_a7d2aee0830aea5b913243ae7d013e224}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_e_h_1_1_entity_a7d2aee0830aea5b913243ae7d013e224}{add\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Sets Components to vector list on initialization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_af098abf8e986cde3e7a6897406bfa32c}\label{class_e_h_1_1_entity_af098abf8e986cde3e7a6897406bfa32c}} 
+{\footnotesize template$<$typename T , typename A $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_e_h_1_1_entity_af098abf8e986cde3e7a6897406bfa32c}{add\+Component}} (A a)
+\begin{DoxyCompactList}\small\item\em adds Components to vector list on initialization \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_aaf789540bbf6e6ce34e4255463f2893a}\label{class_e_h_1_1_entity_aaf789540bbf6e6ce34e4255463f2893a}} 
+{\footnotesize template$<$typename T , typename A , typename B $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries add\+Component} (A a, B b)
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_af39c34969a0e2542695e8f2da05be6b5}\label{class_e_h_1_1_entity_af39c34969a0e2542695e8f2da05be6b5}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_application}{Application}} $>$ {\bfseries get\+Application} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_a2543a44b6f2015e8de8f7ae64da51ccf}\label{class_e_h_1_1_entity_a2543a44b6f2015e8de8f7ae64da51ccf}} 
+void {\bfseries tick} ()
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_a361c154d7aa1db8dc1b2819d88d69100}\label{class_e_h_1_1_entity_a361c154d7aa1db8dc1b2819d88d69100}} 
+void {\bfseries display} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_ad293d8b7cafa1c096674ce6f895cc468}\label{class_e_h_1_1_entity_ad293d8b7cafa1c096674ce6f895cc468}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_e_h_1_1_entity_ad293d8b7cafa1c096674ce6f895cc468}{self}}
+\begin{DoxyCompactList}\small\item\em Weak pointer to \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_a875a51723e0bd7de0ce73d1684d0a34a}\label{class_e_h_1_1_entity_a875a51723e0bd7de0ce73d1684d0a34a}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_application}{Application}} $>$ \mbox{\hyperlink{class_e_h_1_1_entity_a875a51723e0bd7de0ce73d1684d0a34a}{application}}
+\begin{DoxyCompactList}\small\item\em Weak Pointer to \mbox{\hyperlink{class_e_h_1_1_application}{Application}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_ac2da46b02d8d2d36d7a9cf0905e8123b}\label{class_e_h_1_1_entity_ac2da46b02d8d2d36d7a9cf0905e8123b}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{class_e_h_1_1_entity_ac2da46b02d8d2d36d7a9cf0905e8123b}{components}}
+\begin{DoxyCompactList}\small\item\em Weak pointer to Components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_entity_a23f25bcc02a0e94c2f5a4188496b04d0}\label{class_e_h_1_1_entity_a23f25bcc02a0e94c2f5a4188496b04d0}} 
+class \mbox{\hyperlink{class_e_h_1_1_entity_a23f25bcc02a0e94c2f5a4188496b04d0}{Application}}
+\begin{DoxyCompactList}\small\item\em Allows the \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}} class to access the \mbox{\hyperlink{class_e_h_1_1_application}{Application}} class\textquotesingle{} private and protected members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents our Entities in C\+ES 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Entity.\+h\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Entity.\+cpp\end{DoxyCompactItemize}

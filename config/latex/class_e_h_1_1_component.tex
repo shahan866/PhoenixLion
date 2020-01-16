@@ -1,0 +1,67 @@
+\hypertarget{class_e_h_1_1_component}{}\doxysection{EH\+::Component Class Reference}
+\label{class_e_h_1_1_component}\index{EH::Component@{EH::Component}}
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+
+
+Inheritance diagram for EH\+::Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_e_h_1_1_component__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_ad25b90b91a181b120bafd58e53744560}\label{class_e_h_1_1_component_ad25b90b91a181b120bafd58e53744560}} 
+virtual \mbox{\hyperlink{class_e_h_1_1_component_ad25b90b91a181b120bafd58e53744560}{$\sim$\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for a \mbox{\hyperlink{class_e_h_1_1_component}{Component}} Object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_a5deffd70ede3dac3744d28ac6c5f092e}\label{class_e_h_1_1_component_a5deffd70ede3dac3744d28ac6c5f092e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_application}{Application}} $>$ \mbox{\hyperlink{class_e_h_1_1_component_a5deffd70ede3dac3744d28ac6c5f092e}{get\+Application}} ()
+\begin{DoxyCompactList}\small\item\em Returns a shared pointer of type \mbox{\hyperlink{class_e_h_1_1_application}{Application}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_a381a7d86ec51e623ee67c5ddaa9975b2}\label{class_e_h_1_1_component_a381a7d86ec51e623ee67c5ddaa9975b2}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_e_h_1_1_component_a381a7d86ec51e623ee67c5ddaa9975b2}{get\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Returns a shared pointer of type \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_af4f7c207cd59817d0c6caba7de91d92d}\label{class_e_h_1_1_component_af4f7c207cd59817d0c6caba7de91d92d}} 
+virtual void \mbox{\hyperlink{class_e_h_1_1_component_af4f7c207cd59817d0c6caba7de91d92d}{on\+Init}} ()
+\begin{DoxyCompactList}\small\item\em Virtual on\+Init function This function can be overidden by a derived class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_a781d2595f8d7955ec37c3002cc4bb0ee}\label{class_e_h_1_1_component_a781d2595f8d7955ec37c3002cc4bb0ee}} 
+virtual void \mbox{\hyperlink{class_e_h_1_1_component_a781d2595f8d7955ec37c3002cc4bb0ee}{on\+Begin}} ()
+\begin{DoxyCompactList}\small\item\em Virtual on\+Begin function This function can be overidden by a derived class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_adc58202ed5512599b77353de20750edf}\label{class_e_h_1_1_component_adc58202ed5512599b77353de20750edf}} 
+virtual void \mbox{\hyperlink{class_e_h_1_1_component_adc58202ed5512599b77353de20750edf}{on\+Tick}} ()
+\begin{DoxyCompactList}\small\item\em Virtual on\+Tick function This function can be overidden by a derived class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_ad9e4cf8268ec75b7ed4679c2a76b6c3a}\label{class_e_h_1_1_component_ad9e4cf8268ec75b7ed4679c2a76b6c3a}} 
+virtual void \mbox{\hyperlink{class_e_h_1_1_component_ad9e4cf8268ec75b7ed4679c2a76b6c3a}{on\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Virtual on\+Display function This function can be overidden by a derived class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_a8fa02bfff560165fa35030b0bd8b05d1}\label{class_e_h_1_1_component_a8fa02bfff560165fa35030b0bd8b05d1}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_e_h_1_1_component_a8fa02bfff560165fa35030b0bd8b05d1}{entity}}
+\begin{DoxyCompactList}\small\item\em Weak pointer of \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_ad2ee1fb93e4c29d6b85757d1ea675c5a}\label{class_e_h_1_1_component_ad2ee1fb93e4c29d6b85757d1ea675c5a}} 
+bool \mbox{\hyperlink{class_e_h_1_1_component_ad2ee1fb93e4c29d6b85757d1ea675c5a}{began}}
+\begin{DoxyCompactList}\small\item\em Boolean to control ticks for Components with \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_component_a614439ccac0344926adc4c0165d64060}\label{class_e_h_1_1_component_a614439ccac0344926adc4c0165d64060}} 
+class \mbox{\hyperlink{class_e_h_1_1_component_a614439ccac0344926adc4c0165d64060}{Entity}}
+\begin{DoxyCompactList}\small\item\em Allows the \mbox{\hyperlink{class_e_h_1_1_component}{Component}} class to access the \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}} class\textquotesingle{} private and protected members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents Components in the C\+ES, All components inherit from this class 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Component.\+h\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Component.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\hypertarget{class_e_h_1_1_shader}{}\doxysection{EH\+::Shader Class Reference}
+\label{class_e_h_1_1_shader}\index{EH::Shader@{EH::Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+
+
+Inheritance diagram for EH\+::Shader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_e_h_1_1_shader__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for EH\+::Shader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_e_h_1_1_shader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a24ff084960f9a0b87b232b59318a5f49}\label{class_e_h_1_1_shader_a24ff084960f9a0b87b232b59318a5f49}} 
+void \mbox{\hyperlink{class_e_h_1_1_shader_a24ff084960f9a0b87b232b59318a5f49}{on\+Init}} (const G\+Lchar $\ast$vertex\+Shader\+File\+Path, const G\+Lchar $\ast$fragment\+Shader\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Read vertex shader and fragment shaders on\+Init. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_ae6aa6aee5e86aa93988983bbf4a15cc4}\label{class_e_h_1_1_shader_ae6aa6aee5e86aa93988983bbf4a15cc4}} 
+void \mbox{\hyperlink{class_e_h_1_1_shader_ae6aa6aee5e86aa93988983bbf4a15cc4}{on\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Activate the shader. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a3fa32382e67d76edc67fb2dde6e061bd}\label{class_e_h_1_1_shader_a3fa32382e67d76edc67fb2dde6e061bd}} 
+void \mbox{\hyperlink{class_e_h_1_1_shader_a3fa32382e67d76edc67fb2dde6e061bd}{set\+Bool}} (const std\+::string \&name, bool value) const
+\begin{DoxyCompactList}\small\item\em Utility Uniform Functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_af5bbc3e0b1be76ae266ec56c3eb2b589}\label{class_e_h_1_1_shader_af5bbc3e0b1be76ae266ec56c3eb2b589}} 
+void {\bfseries set\+Int} (const std\+::string \&name, int value) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a22f82f561b0f907423810240b1de4532}\label{class_e_h_1_1_shader_a22f82f561b0f907423810240b1de4532}} 
+void {\bfseries set\+Float} (const std\+::string \&name, float value) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_ae3061a655a5e24fd7af94158c58ab25a}\label{class_e_h_1_1_shader_ae3061a655a5e24fd7af94158c58ab25a}} 
+void {\bfseries set\+Vec2} (const std\+::string \&name, const glm\+::vec2 \&value) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_af8cd0f7f7ae0d9b1ef21227b41707767}\label{class_e_h_1_1_shader_af8cd0f7f7ae0d9b1ef21227b41707767}} 
+void {\bfseries set\+Vec2} (const std\+::string \&name, float x, float y) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_ac3efca7eb9b92c937ea360e6628d619b}\label{class_e_h_1_1_shader_ac3efca7eb9b92c937ea360e6628d619b}} 
+void {\bfseries set\+Vec3} (const std\+::string \&name, const glm\+::vec3 \&value) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_afed62b7b89f69f69c15dc8da6c2aeeac}\label{class_e_h_1_1_shader_afed62b7b89f69f69c15dc8da6c2aeeac}} 
+void {\bfseries set\+Vec3} (const std\+::string \&name, float x, float y, float z) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a3a31f06235d483baefe7fe68465498a7}\label{class_e_h_1_1_shader_a3a31f06235d483baefe7fe68465498a7}} 
+void {\bfseries set\+Vec4} (const std\+::string \&name, const glm\+::vec4 \&value) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a7f78bb2ee0406538dbb6282099112390}\label{class_e_h_1_1_shader_a7f78bb2ee0406538dbb6282099112390}} 
+void {\bfseries set\+Vec4} (const std\+::string \&name, float x, float y, float z, float w)
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a520cf624af8b988c43b7844e5ed75394}\label{class_e_h_1_1_shader_a520cf624af8b988c43b7844e5ed75394}} 
+void {\bfseries set\+Mat2} (const std\+::string \&name, const glm\+::mat2 \&mat) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a352e84920a0f04d78adc0d2c38415746}\label{class_e_h_1_1_shader_a352e84920a0f04d78adc0d2c38415746}} 
+void {\bfseries set\+Mat3} (const std\+::string \&name, const glm\+::mat3 \&mat) const
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_ab23725197a61680b9bc6af0824de3020}\label{class_e_h_1_1_shader_ab23725197a61680b9bc6af0824de3020}} 
+void {\bfseries set\+Mat4} (const std\+::string \&name, const glm\+::mat4 \&mat) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_shader_a3ca3062f1647e6aa1519a9756b5efaa0}\label{class_e_h_1_1_shader_a3ca3062f1647e6aa1519a9756b5efaa0}} 
+unsigned int \mbox{\hyperlink{class_e_h_1_1_shader_a3ca3062f1647e6aa1519a9756b5efaa0}{ID}}
+\begin{DoxyCompactList}\small\item\em Program ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents \mbox{\hyperlink{class_e_h_1_1_shader}{Shader}} \mbox{\hyperlink{class_e_h_1_1_component}{Component}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Shader.\+h\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Shader.\+cpp\end{DoxyCompactItemize}

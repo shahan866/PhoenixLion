@@ -1,0 +1,65 @@
+\hypertarget{class_e_h_1_1_application}{}\doxysection{EH\+::Application Class Reference}
+\label{class_e_h_1_1_application}\index{EH::Application@{EH::Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_e_h_1_1_application_a3da5174a26557d5189fd82a6fd47e72f}{start}} ()
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a2287be865c41bdabb006b07a2517abc0}\label{class_e_h_1_1_application_a2287be865c41bdabb006b07a2517abc0}} 
+void \mbox{\hyperlink{class_e_h_1_1_application_a2287be865c41bdabb006b07a2517abc0}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop \mbox{\hyperlink{class_e_h_1_1_application}{Application}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a05a2fd0b06ad21246a37da18e82ec31a}\label{class_e_h_1_1_application_a05a2fd0b06ad21246a37da18e82ec31a}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{class_e_h_1_1_application_a05a2fd0b06ad21246a37da18e82ec31a}{add\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a33e99bc19844432f928162b65ea1217d}\label{class_e_h_1_1_application_a33e99bc19844432f928162b65ea1217d}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_application}{Application}} $>$ \mbox{\hyperlink{class_e_h_1_1_application_a33e99bc19844432f928162b65ea1217d}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize \mbox{\hyperlink{class_e_h_1_1_application}{Application}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a5f1d54d11c5ba1101552235c0e909619}\label{class_e_h_1_1_application_a5f1d54d11c5ba1101552235c0e909619}} 
+const float \mbox{\hyperlink{class_e_h_1_1_application_a5f1d54d11c5ba1101552235c0e909619}{m\+\_\+\+Window\+Width}} = 800
+\begin{DoxyCompactList}\small\item\em Window Width. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a6b1e90e2f06950c2418299449897c5c0}\label{class_e_h_1_1_application_a6b1e90e2f06950c2418299449897c5c0}} 
+const float \mbox{\hyperlink{class_e_h_1_1_application_a6b1e90e2f06950c2418299449897c5c0}{m\+\_\+\+Window\+Height}} = 600
+\begin{DoxyCompactList}\small\item\em Window Height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a3dc36914f94127bd5c029168d3e66e6c}\label{class_e_h_1_1_application_a3dc36914f94127bd5c029168d3e66e6c}} 
+bool \mbox{\hyperlink{class_e_h_1_1_application_a3dc36914f94127bd5c029168d3e66e6c}{running}}
+\begin{DoxyCompactList}\small\item\em Bool to check if \mbox{\hyperlink{class_e_h_1_1_application}{Application}} is running. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a36e263006414fb18e6328bc56761d22a}\label{class_e_h_1_1_application_a36e263006414fb18e6328bc56761d22a}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_entity}{Entity}} $>$ $>$ \mbox{\hyperlink{class_e_h_1_1_application_a36e263006414fb18e6328bc56761d22a}{entities}}
+\begin{DoxyCompactList}\small\item\em vector list of entites \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a105b4fdb3f8c4b3a833ca471ef5f7029}\label{class_e_h_1_1_application_a105b4fdb3f8c4b3a833ca471ef5f7029}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{class_e_h_1_1_application}{Application}} $>$ \mbox{\hyperlink{class_e_h_1_1_application_a105b4fdb3f8c4b3a833ca471ef5f7029}{self}}
+\begin{DoxyCompactList}\small\item\em Weak Pointer to \mbox{\hyperlink{class_e_h_1_1_application}{Application}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_h_1_1_application_a0db68eb1c55f0bbdc560116db198f1af}\label{class_e_h_1_1_application_a0db68eb1c55f0bbdc560116db198f1af}} 
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{class_e_h_1_1_application_a0db68eb1c55f0bbdc560116db198f1af}{window}}
+\begin{DoxyCompactList}\small\item\em Pointer for S\+DL Window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main system loop of our engine 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_h_1_1_application_a3da5174a26557d5189fd82a6fd47e72f}\label{class_e_h_1_1_application_a3da5174a26557d5189fd82a6fd47e72f}} 
+\index{EH::Application@{EH::Application}!start@{start}}
+\index{start@{start}!EH::Application@{EH::Application}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void E\+H\+::\+Application\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\textbackslash{}\+Start \mbox{\hyperlink{class_e_h_1_1_application}{Application}} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Application.\+h\item 
+C\+:/\+Users/shaha/\+Desktop/\+G\+E\+P/\+Phoenix\+Lion/src/\+E\+H/Application.\+cpp\end{DoxyCompactItemize}

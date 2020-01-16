@@ -3,21 +3,49 @@ project (EH)
 
 include_directories(
   src
+  contrib
 )
+
+if(MSVC)
+  include_directories(
+    contrib/msvc-2017-windows-x86/glew/include
+    contrib/msvc-2017-windows-x86/SDL2/include
+    contrib/msvc-2017-windows-x86/openal-soft/include
+    contrib/msvc-2017-windows-x86/ogg/include
+    contrib/msvc-2017-windows-x86/vorbis/include
+  )
+
+  link_directories(
+    ${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/SDL2/lib
+    ${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/glew/lib
+    ${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/openal-soft/lib
+    ${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/ogg/lib
+    ${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/vorbis/lib
+  )
+else()
+  include_directories(
+    /usr/X11R6/include
+    /usr/local/include
+  )
+
+  link_directories(
+    /usr/X11R6/lib
+    /usr/local/lib
+  )
+endif()
+
+if(MSVC)
+  add_definitions(-DSDL_MAIN_HANDLED)
+endif()
 
 add_library (EH 
 src/EH/eh.h
-src/EH/dummy.cpp
 src/EH/Application.cpp
 src/EH/Application.h
 src/EH/Entity.cpp
 src/EH/Entity.h
 src/EH/Component.cpp
 src/EH/Component.h
-src/EH/Environment.cpp
-src/EH/Environment.h
-src/EH/Keyboard.cpp
-src/EH/Keyboard.h
 src/EH/Exception.h
 src/EH/Exception.cpp  
 src/EH/Renderer.h
@@ -33,7 +61,15 @@ src/EH/Transform.cpp
 
 )
 
-target_link_libraries(EH SDL2 opengl32 glew32)
+if(MSVC)
+  target_link_libraries(myengine
+    SDL2 glew32 opengl32 OpenAL32 ogg vorbis vorbisfile
+  )
+else()
+  target_link_libraries(myengine
+    SDL2 GLU GLEW GL openal ogg vorbis vorbisfile
+  )
+endif()
 
 add_executable(sandbox
  src/sandbox/main.cpp
@@ -43,3 +79,23 @@ add_executable(sandbox
 target_link_libraries(
 sandbox EH
 )
+
+if(MSVC)
+  add_custom_command(TARGET game POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+      "${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/SDL2/bin/SDL2.dll"
+      "$<TARGET_FILE_DIR:game>"
+  )
+
+  add_custom_command(TARGET game POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+      "${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/glew/bin/glew32.dll"
+      "$<TARGET_FILE_DIR:game>"
+  )
+
+  add_custom_command(TARGET game POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+      "${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/openal-soft/bin/OpenAL32.dll"
+      "$<TARGET_FILE_DIR:game>"
+  )
+endif()
