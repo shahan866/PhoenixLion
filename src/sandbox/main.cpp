@@ -1,6 +1,8 @@
+//System Includes
 #include <iostream>
 #include <memory>
 #include <string>
+//Local Includes
 #include <EH/eh.h>
 
 
@@ -21,8 +23,6 @@ int main()
 	
 	//Transformations
 	transformCrate->setPosition(glm::vec3(1.0f, 1.0f, -10.0f));
-
-	//entityCube->getComponent<EH::Transform>()->setRotation(glm::vec3(2.0f, 0.0f, 0.0f));
 	transformCrate->setIncrementRotation(glm::vec3(0.01f, 0.0f, 0.0f));
 	transformCrate->setScale(glm::vec3(1.0f, 1.0f, -1.0f));
 	
@@ -33,7 +33,7 @@ int main()
 
 	std::cout << "Crate Created" << std::endl;
 
-	//Yellow Cube
+	//Purple Cube
 	std::shared_ptr<EH::Entity> entityCube = Engine->addEntity();
 	std::shared_ptr<EH::Transform> transformCube = entityCube->addComponent<EH::Transform>();
 	transformCube->setPosition(glm::vec3(0.0f, 0.0f, -10.0f));
@@ -41,7 +41,6 @@ int main()
 	transformCube->setScale(glm::vec3(1.0f, 1.0f, 1.0f));
 	std::shared_ptr<EH::Shader> shaderCube = entityCube->addComponent<EH::Shader>("../resources/simple.vert", "../resources/simpleColour.frag");
 	std::shared_ptr<EH::Renderer> renderCube = entityCube->addComponent<EH::Renderer>();
-
 
 	//Elemental Hero Neos
 	std::shared_ptr<EH::Entity> entityNeos = Engine->addEntity();
@@ -61,8 +60,8 @@ int main()
 	std::shared_ptr<EH::Transform> transformCamera = entityCamera->addComponent<EH::Transform>();
 	std::shared_ptr<EH::Camera> cameraCamera = entityCamera->addComponent<EH::Camera>();
 
-	//start function loops through each entity, first through tick funtions of the entity's components
-	//then display functions of the entity's components
+	//Start function loops through each Entity, first through OnTick funtions of the entity's components
+	//then OnDisplay functions of the entity's Components
 	Engine->start();
 	
 return 0;

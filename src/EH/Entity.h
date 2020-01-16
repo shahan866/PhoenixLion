@@ -11,15 +11,21 @@
 
 namespace EH
 {
-
+	
 	class Application;
 
+	/**
+	*Represents our Entities in CES
+	*/
 	class Entity
 	{
-		friend class Application;
+		friend class Application; ///<Allows the Entity class to access the Application class' private and protected members
 
 	public:
 
+		/**
+		*\brief gets Components from vector list
+		*/
 		template <typename T>
 		std::shared_ptr<T> getComponent()
 		{
@@ -36,6 +42,9 @@ namespace EH
 			throw std::exception();
 		}
 
+		/**
+		*\brief Sets Components to vector list on initialization 
+		*/
 		template <typename T>
 		std::shared_ptr<T> addComponent()
 		{
@@ -45,6 +54,9 @@ namespace EH
 			return rtn;
 		}
 
+		/**
+		*\brief adds Components to vector list on initialization
+		*/
 		template <typename T, typename A>
 		std::shared_ptr<T> addComponent(A a)
 		{
