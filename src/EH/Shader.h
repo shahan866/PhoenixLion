@@ -12,21 +12,32 @@
 
 namespace EH
 {
+	/**
+	*Represents Shader Component
+	*/
+
   class Shader : public Component 
   {
 
   public:
-    // the program ID
-    unsigned int ID;
+    unsigned int ID;///<Program ID
 
-    // constructor reads and builds the shader
+    //Constructor reads and builds Shader
 
+	/**
+	*\brief Read vertex shader and fragment shaders onInit
+	*/
     void onInit(const GLchar* vertexShaderFilePath, const GLchar* fragmentShaderFilePath);
-    //Shader(const GLchar* vertexShaderFilePath, const GLchar* fragmentShaderFilePath);
 
-    // use/activate the shader
+
+	/**
+	*\brief Activate the shader
+	*/
     void onDisplay();
-    // utility uniform functions
+
+	/**
+	*\brief Utility Uniform Functions
+	*/
     void setBool(const std::string &name, bool value) const;
     void setInt(const std::string &name, int value) const;
     void setFloat(const std::string &name, float value) const;

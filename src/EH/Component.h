@@ -15,7 +15,7 @@ namespace EH
 	*/
 	class Component
 	{
-		friend class Entity; ///Allows the Component class to access the Entity class' private and protected members
+		friend class Entity; ///<Allows the Component class to access the Entity class' private and protected members
 
 	public:
 

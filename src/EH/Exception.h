@@ -3,7 +3,9 @@
 
 namespace rend
 {
-
+	/**
+	*Class for exception handling
+	*/
 struct Exception : public std::exception
 {
   Exception(const std::string& message);

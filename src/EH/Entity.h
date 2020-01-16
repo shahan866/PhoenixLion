@@ -78,9 +78,9 @@ namespace EH
 		std::shared_ptr<Application> getApplication();
 
 	private:
-		std::weak_ptr<Entity> self;
-		std::weak_ptr<Application> application;
-		std::vector<std::shared_ptr<Component> > components;
+		std::weak_ptr<Entity> self; ///< Weak pointer to Entity
+		std::weak_ptr<Application> application; ///< Weak Pointer to Application
+		std::vector<std::shared_ptr<Component> > components; ///<Weak pointer to Components
 
 		void tick();
 		void display();
