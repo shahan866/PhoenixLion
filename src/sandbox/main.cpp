@@ -44,8 +44,10 @@ int main()
 	//Add Components to Cube 1
 	std::shared_ptr<EH::Transform> transformCube = entityCube->addComponent<EH::Transform>();
 	//Transformations
-	entityCube->getComponent<EH::Transform>()-> setPosition(glm::vec3(1.0f, 1.0f, -10.0f));
+	//entityCube->getComponent<EH::Transform>()-> setPosition(glm::vec3(1.0f, 1.0f, -8.0f));
+	transformCube->setPosition(glm::vec3(1.0f, 1.0f, -20.0f));
 	entityCube->getComponent<EH::Transform>()->setRotation(glm::vec3(2.0f, 0.0f, 0.0f));
+	entityCube->getComponent<EH::Transform>()->setIncrementRotation(glm::vec3(0.01f, 0.0f, 0.0f));
 	entityCube->getComponent<EH::Transform>()->setScale(glm::vec3(1.0f, 1.0f, -1.0f));
 	//Shaders/Render/Load Textures
 	std::shared_ptr<EH::Shader> shaderCube = entityCube->addComponent<EH::Shader>("../resources/simple.vert", "../resources/simple.frag");

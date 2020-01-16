@@ -58,11 +58,11 @@ namespace EH
         (*it)->tick();
       }
 
-	  float r = 0.0f;
-	  float g = 0.0f;
-	  float b = 0.0f;
+	  /*float bg_r = 0.0f;
+	  float bg_g = 0.0f;
+	  float bg_b = 0.0f;*/
 
-      glClearColor(0.5f, 0.0f, 0.2f, 1.0f);
+      glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 	  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
       for (std::vector<std::shared_ptr<Entity> >::iterator it = entities.begin();

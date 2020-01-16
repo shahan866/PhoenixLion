@@ -102,9 +102,6 @@ namespace EH
     glUseProgram(ID);
 
 	//View Matrix
-	//glm::vec3 _pos = getEntity()->getComponent<Transform>()->getPosition();
-	//glm::vec3 _front = getEntity()->getComponent<Transform>()->getFront();
-	//glm::vec3 _up = getEntity()->addComponent<Transform>()->getUp();
 	glm::mat4 _view = glm::mat4(1);
 
 	//Model Matrix
@@ -112,6 +109,7 @@ namespace EH
 
 	//Projection Matrix
 	glm::mat4 _projection = glm::perspective(glm::radians(45.0f), (float)800.f / (float)600.f, 0.1f, 100.0f);
+
 
 	//Pass Variables into the Shader
 	setMat4("view", _view);
