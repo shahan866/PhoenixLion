@@ -14,6 +14,7 @@ namespace EH
 	glm::vec3 m_Rotation = glm::vec3(0.0f, 0.0f, 0.0f);
 	glm::vec3 m_IncrementRotation = glm::vec3(0.0f, 0.0f, 0.0f);
 	glm::vec3 m_Scale = glm::vec3(1.0f);
+	glm::vec3 m_IncrementScale = glm::vec3(0.0f, 0.0f, 0.0f);
 
   public:
 
@@ -24,6 +25,7 @@ namespace EH
     glm::vec3 getRotation() { return m_Rotation; }
 	glm::vec3 getIncrementRotation() { return m_IncrementRotation; }
     glm::vec3 getScale() { return m_Scale; }
+	glm::vec3 getIncrementScale() { return m_IncrementScale; }
 
 	void onTick();
 
@@ -34,5 +36,6 @@ namespace EH
     void setRotation(glm::vec3 _rotation) { m_Rotation = _rotation; }
 	void setIncrementRotation(glm::vec3 _incrementRotation) { m_IncrementRotation = _incrementRotation; }
     void setScale(glm::vec3 _scale) { m_Scale = _scale; }
+	void setIncrementScale(glm::vec3 _incrementScale) { m_IncrementScale = _incrementScale; }
   };
 }

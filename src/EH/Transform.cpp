@@ -6,6 +6,7 @@ namespace EH
 {
 	void Transform::onTick() {
 		setRotation(m_Rotation + m_IncrementRotation);
+		setScale(m_Scale + m_IncrementScale);
 
 	}
 	//Get Model Function
