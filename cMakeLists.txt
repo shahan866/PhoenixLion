@@ -62,11 +62,11 @@ src/EH/Transform.cpp
 )
 
 if(MSVC)
-  target_link_libraries(myengine
+  target_link_libraries(EH
     SDL2 glew32 opengl32 OpenAL32 ogg vorbis vorbisfile
   )
 else()
-  target_link_libraries(myengine
+  target_link_libraries(EH
     SDL2 GLU GLEW GL openal ogg vorbis vorbisfile
   )
 endif()
@@ -81,21 +81,21 @@ sandbox EH
 )
 
 if(MSVC)
-  add_custom_command(TARGET game POST_BUILD
+  add_custom_command(TARGET sandbox POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
       "${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/SDL2/bin/SDL2.dll"
-      "$<TARGET_FILE_DIR:game>"
+      "$<TARGET_FILE_DIR:sandbox>"
   )
 
-  add_custom_command(TARGET game POST_BUILD
+  add_custom_command(TARGET sandbox POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
       "${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/glew/bin/glew32.dll"
-      "$<TARGET_FILE_DIR:game>"
+      "$<TARGET_FILE_DIR:sandbox>"
   )
 
-  add_custom_command(TARGET game POST_BUILD
+  add_custom_command(TARGET sandbox POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
       "${CMAKE_SOURCE_DIR}/contrib/msvc-2017-windows-x86/openal-soft/bin/OpenAL32.dll"
-      "$<TARGET_FILE_DIR:game>"
+      "$<TARGET_FILE_DIR:sandbox>"
   )
 endif()
